@@ -1,0 +1,50 @@
+
+<div class="row">
+<div class = "col-sm-3">
+    <div class="row"> Definition Version</div>
+    <div class="row">{{processDefinition["version"]}}</div>
+    <br/>
+        <div class="row">Definition ID:</div>
+    <div class="row">{{processDefinition["id"]}}</div>
+    <br/>
+        <div class="row">Definition Key:</div>
+    <div class="row">{{processDefinition["key"]}}</div>
+    <br/>
+        <div class="row">Definition Name:</div>
+    <div class="row">{{processDefinition["name"]}}</div>
+    <br/>
+        <div class="row"> Definition resource</div>
+    <div class="row">{{processDefinition["resource"]}}</div>
+    <br/>
+        <div class="row">Deployment ID:</div>
+    <div class="row">{{processDefinition["deploymentId"]}}</div>
+    
+    </div>
+    
+<div class = "col-sm-9" style="text-align:center;">
+    <div class = "row" style="height:250px;overflow=hidden;">
+    <img src = "http://localhost:8085/rest/process-definition/TwitterDemoProcess:1:20/diagram"/>
+    </div>
+    <hr/>
+    <div class = "row"><b>Process Instances</b></div>
+    <hr/>
+    <b>
+    <div class="row">
+        <div class = "col-sm-3">State</div>
+        <div class = "col-sm-3">Id</div>
+        <div class = "col-sm-3">Start Time</div>
+        <div class = "col-sm-3">User Started</div>
+    </div>
+    </b>
+    
+     <div class="row" *ngFor="let pd of processInstance">
+        <div class = "col-sm-3">{{pd.state}}</div>
+        <div class = "col-sm-3" (click)="goToVariable(pd.id)">{{pd.id}}</div>
+        <div class = "col-sm-3">{{pd.startTime}}</div>
+        <div class = "col-sm-3">{{pd.startUserId}}</div>
+    </div>   
+
+    </div>
+</div>
+
+<router-outlet></router-outlet>

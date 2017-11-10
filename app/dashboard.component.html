@@ -1,0 +1,45 @@
+<div class="row">
+<div class = "col-sm-3">
+    <div class="row">Instance Id:</div>
+    <div class="row">1</div>
+        <div class="row">Business Key:</div>
+    <div class="row">2</div>
+        <div class="row">Definition Version:</div>
+    <div class="row">3</div>
+        <div class="row">Definition Id:</div>
+    <div class="row">4</div>
+        <div class="row"> Definition Key</div>
+    <div class="row">5</div>
+        <div class="row">Deployment Name:</div>
+    <div class="row">6</div>
+        <div class="row">Tenent Id:</div>
+    <div class="row">7</div>
+    </div>
+    
+<div class = "col-sm-9" style="text-align:center;">
+    <div class = "row"> Insert image here</div>
+    <hr/>
+    <div class = "row"><b>Process Task: Variables</b></div>
+    <hr/>
+    <b>
+    <div class="row">
+        <div class = "col-sm-3">Name</div>
+        <div class = "col-sm-3">Value</div>
+        <div class = "col-sm-3">Type</div>
+        <div class = "col-sm-3">Scope</div>
+    </div>
+    </b>
+    
+     <div class="row" *ngFor="let id of dataKey">
+        <div class = "col-sm-3">{{id}}</div>
+        <div class = "col-sm-3">{{varData[id].value}}</div>
+        <div class = "col-sm-3">{{varData[id].type}}</div>
+        <div class = "col-sm-3">{{varData[id].scope}}</div>
+    </div>   
+
+    </div>
+</div>
+
+
+
+<!-- <my-hero-search></my-hero-search> -->

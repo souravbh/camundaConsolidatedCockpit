@@ -1,0 +1,78 @@
+<div class="container-fluid">
+    <h1 style="text-align:center">{{title}}</h1>
+    <router-outlet>
+<hr/>   
+<div style="text-align:left">
+  <h1>
+   Right now!!
+  </h1>
+ </div>  
+<div class="row">
+  <div class="col-sm-4" style="text-align:center">
+      <div class="row" >Running Process instances</div>
+        <div class = "row">
+            <b><div style="z-index:50;position:relative;top:90px;color:white;cursor: pointer;" (click)="gotoDetail()">
+                 {{results}}
+                </div></b>
+            <canvas id = "runningCanvas" style="cursor: pointer;" (click)="gotoDetail()"></canvas> 
+      </div>
+  </div>
+    <div class="col-sm-4" style="text-align:center">
+      <div class="row" >Open incidents</div>
+        <div class = "row">
+            <b> <div style="z-index:50;position:relative;top:90px;color:white;" (click)="gotoDetail1()">NA</div></b>
+            <canvas id = "openCanvas" style="cursor: pointer;"></canvas> 
+      </div>
+  </div>
+  <div class="col-sm-4" style="text-align:center">
+      <div class="row">Open human tasks</div>
+        <div class = "row">
+            <b> <div style="z-index:50;position:relative;top:90px;color:white;">NA</div></b>
+            <canvas id = "humanCanvas" style="cursor: pointer;"></canvas> 
+      </div>
+  </div>
+
+</div>
+    
+<hr/>   
+<div style="text-align:left">
+  <h1>
+   Deployed
+  </h1>
+ </div>  
+<div class="row">
+  <div class="col-sm-3" style="text-align:center">
+       <div class="row">Process definitions</div>
+        <div class = "row">
+            <b> <div style="z-index:50;position:relative;top:50px;color:white;">{{results}}</div></b>
+            <canvas id = "pd1" width="100" height="100" style="cursor: pointer;"></canvas> 
+      </div>
+      </div>
+  <div class="col-sm-3" style="text-align:center">
+       <div class="row">Decision definitions</div>
+        <div class = "row">
+            <b> <div style="z-index:50;position:relative;top:50px;color:white;">NA</div></b>
+            <canvas id = "pd2" width="100" height="100" style="cursor: pointer;"></canvas> 
+      </div>
+      </div>
+  <div class="col-sm-3" style="text-align:center">
+      <div class="row">Case Definitions</div>
+        <div class = "row">
+            <b> <div style="z-index:50;position:relative;top:50px;color:white;">NA</div></b>
+            <canvas id = "pd3" width="100" height="100" style="cursor: pointer;"></canvas> 
+      </div>
+        </div>
+    <div class="col-sm-3" style="text-align:center">
+     <div class="row">Deployments</div>
+        <div class = "row">
+            <b> <div style="z-index:50;position:relative;top:50px;color:white;">NA</div></b>
+            <canvas id = "pd4" width="100" height="100" style="cursor: pointer;"></canvas> 
+      </div>
+        </div>
+</div>
+<hr/>   
+  </router-outlet>  
+</div>
+
+         
+
